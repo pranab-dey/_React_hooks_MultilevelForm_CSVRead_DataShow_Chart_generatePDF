@@ -3,6 +3,7 @@ import React from 'react';
 import { multiStepContext } from './StepContext';
 import { useContext } from 'react';
 import Chart from './Chart';
+import { Button } from  '@material-ui/core';
 
 
 
@@ -31,7 +32,7 @@ export default function UploadedCSV (){
   return(
     <div>
         <form onSubmit={handleCsvSubmit}>
-            <label><b> Max - X </b></label>
+            <label className='label'><b> Max - X </b></label>
             <input
                 value={csvData.max_x || ''}
                 type = 'number'
@@ -39,7 +40,7 @@ export default function UploadedCSV (){
                 name='max_x'
                 onChange = {handleCsvChange}
             /><br></br>
-            <label><b> Min - X </b></label>
+            <label className='label'><b> Min - X </b></label>
             <input
                 value={csvData.min_x || ''}
                 type = 'number'
@@ -47,7 +48,7 @@ export default function UploadedCSV (){
                 name='min_x'
                 onChange = {handleCsvChange}
             /><br></br>
-            <label><b> Max - Y </b></label>
+            <label className='label'><b> Max - Y </b></label>
             <input
                 value={csvData.max_y || ''}
                 type = 'number'
@@ -55,7 +56,7 @@ export default function UploadedCSV (){
                 name='max_y'
                 onChange = {handleCsvChange}
             /><br></br>
-            <label><b> Min - Y </b></label>
+            <label className='label'><b> Min - Y </b></label>
             <input
                 value={csvData.min_y || '' }
                 type = 'number'
@@ -63,7 +64,7 @@ export default function UploadedCSV (){
                 name='min_y'
                 onChange = {handleCsvChange}
             /><br></br>
-            <label><b> Max - Z </b></label>
+            <label className='label'><b> Max - Z </b></label>
             <input
                 value={csvData.max_z || ''}
                 type = 'number'
@@ -71,7 +72,7 @@ export default function UploadedCSV (){
                 name='max_z'
                 onChange = {handleCsvChange}
             /><br></br>
-            <label><b> Min - Z </b></label>
+            <label className='label'><b> Min - Z </b></label>
             <input
                 value={csvData.min_z || ''}
                 type = 'number'
@@ -80,10 +81,10 @@ export default function UploadedCSV (){
                 onChange = {handleCsvChange}
             /><br></br>
         {csvUpload ? <Chart /> : ''} <br></br>
-            <div>
-                  <button type = 'submit'>
+            <div className='button1'>
+                  <Button type = 'submit' size = 'large'>
                     Submit
-                  </button>
+                </Button>
             </div>
 
         </form>

@@ -1,6 +1,6 @@
 import React from 'react';
 import UploadedCSV from './UploadedCSV';
-import { TextField } from  '@material-ui/core';
+import { TextField, Button } from  '@material-ui/core';
 
 import useFormValidation from "./useFormValidation";
 import validateAuth from "./validateAuth";
@@ -108,44 +108,44 @@ function SecondStep (){
 
    return (
     <div className="container">
-        <h1>React Assignment</h1>
+        <h1 className='h1'>React Assignment</h1>
         <br></br><br></br>
 
 
-        <TextField label = "Project Name"
-        value = { userData.values['projectName'] }
-        margin = 'normal'
-        variant = 'outlined'
-        color = 'secondary'
-        disabled /> <span></span>
-        <TextField label = "Project Description"
-        value = { userData.values['projectDes'] }
-        margin = 'normal'
-        variant = 'outlined'
-        color = 'secondary'
-        disabled /> <span></span>
-        <TextField label = "Client"
-        value = { userData.values['client'] }
-        margin = 'normal'
-        variant = 'outlined'
-        color = 'secondary'
-        disabled /> <span></span>
-        <TextField label = "Contractor"
-        value = { userData.values['contractor'] }
-        margin = 'normal'
-        variant = 'outlined'
-        color = 'secondary'
-        disabled /> <span></span>
+            <TextField label = "Project Name"
+            value = { userData.values['projectName'] }
+            margin = 'normal'
+            variant = 'outlined'
+            color = 'secondary'
+            disabled /> <span></span>
+            <TextField label = "Project Description"
+            value = { userData.values['projectDes'] }
+            margin = 'normal'
+            variant = 'outlined'
+            color = 'secondary'
+            disabled /> <span></span>
+            <TextField label = "Client"
+            value = { userData.values['client'] }
+            margin = 'normal'
+            variant = 'outlined'
+            color = 'secondary'
+            disabled /> <span></span>
+            <TextField label = "Contractor"
+            value = { userData.values['contractor'] }
+            margin = 'normal'
+            variant = 'outlined'
+            color = 'secondary'
+            disabled /> <span></span>
 
 
-    <h4>Click Or Drag Upload</h4>
+    <h4 className = 'label'>Click Or Drag Upload</h4>
 
         <CSVReader
              onDrop={handleOnCsvDrop}
              config={{ header : true }}
              addRemoveButton
              >
-            <span>Drop CSV file here or click to upload.</span>
+            <span className = 'label' >Drop CSV file here or click to upload.</span>
         </CSVReader> <br></br>
 
 
@@ -154,7 +154,7 @@ function SecondStep (){
 
         <form onSubmit={handleSubmit}>
 
-            <label><b> Max - X </b></label>
+            <label className='label'><b> Max - X </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -167,7 +167,7 @@ function SecondStep (){
                 /><br></br>
                 {errors.max_x && <p className="error-text">{errors.max_x}</p>}<br></br>
 
-            <label><b> Min - X </b></label>
+            <label className='label'><b> Min - X </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -180,7 +180,7 @@ function SecondStep (){
                 /><br></br>
                 {errors.min_x && <p className="error-text">{errors.min_x}</p>}<br></br>
 
-            <label><b> Max - Y </b></label>
+            <label className='label'><b> Max - Y </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -193,7 +193,7 @@ function SecondStep (){
                 /><br></br>
                 {errors.max_y && <p className="error-text">{errors.max_y}</p>}<br></br>
 
-            <label><b> Min - X </b></label>
+            <label className='label'><b> Min - X </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -206,7 +206,7 @@ function SecondStep (){
                 /><br></br>
                 {errors.min_y && <p className="error-text">{errors.min_y}</p>}<br></br>
 
-            <label><b> Max - Z </b></label>
+            <label className='label'><b> Max - Z </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -219,7 +219,7 @@ function SecondStep (){
                 /><br></br>
                 {errors.max_z && <p className="error-text">{errors.max_z}</p>}<br></br>
 
-            <label><b> Min - Z </b></label>
+            <label className='label'><b> Min - Z </b></label>
                 <input
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -233,10 +233,10 @@ function SecondStep (){
                 {errors.min_z && <p className="error-text">{errors.min_z}</p>}<br></br>
 
 
-            <div>
-                  <button  disabled = {isSubmitting} type = 'submit'>
-                    Submit
-                  </button>
+            <div className='button1'>
+                  <Button  disabled = {isSubmitting} type = 'submit' size = 'large'>
+                    <b>Submit</b>
+                </Button>
             </div>
 
         </form>

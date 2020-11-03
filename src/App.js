@@ -33,7 +33,9 @@ function App () {
     <div> {showStep(currentStep)}</div>
 
     <div>
-        {Object.keys(data).length > 0  ? <Result /> : '' }
+        <br></br>
+        {Object.keys(data).length  > 0 ||  Object.keys(data).length  === 4 ? <Result /> : '' }
+        <br></br>
         {Object.keys(csvFinalData).length > 0  ? <Result /> : '' }
 
     </div>

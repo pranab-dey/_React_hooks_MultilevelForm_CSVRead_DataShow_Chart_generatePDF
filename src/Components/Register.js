@@ -4,6 +4,8 @@ import React from "react";
 import useFormValidation from "./useFormValidation";
 import validateAuth from "./validateAuth";
 
+import { Button } from '@material-ui/core';
+
 
 import { multiStepContext } from './StepContext';
 import { useContext } from 'react';
@@ -33,11 +35,11 @@ function Register() {
   // console.log(data);
   return (
     <div className="container">
-      <h1>React Assignment</h1>
+      <h1 className='h1'>React Assignment</h1>
       <br></br>
       <form onSubmit={handleContinue}>
 
-        <label><b>Project Name</b></label>
+        <label  className= 'label'><b>Project Name</b></label>
         <input
           onChange={handleChange}
           onBlur={handleBlur}
@@ -49,7 +51,7 @@ function Register() {
         /><br></br>
         {errors.projectName && <p className="error-text">{errors.projectName}</p>}<br></br>
 
-        <label><b>Project Description</b></label>
+        <label className= 'label'><b>Project Description</b></label>
         <input
           onChange={handleChange}
           onBlur={handleBlur}
@@ -61,7 +63,7 @@ function Register() {
         /><br></br>
         {errors.projectDes && <p className="error-text">{errors.projectDes}</p>}<br></br>
 
-        <label><b>Client</b></label>
+        <label className= 'label'><b>Client</b></label>
         <input
           onChange={handleChange}
           onBlur={handleBlur}
@@ -73,7 +75,7 @@ function Register() {
         /><br></br>
         {errors.client && <p className="error-text">{errors.client}</p>}<br></br>
 
-        <label><b>Contractor</b></label>
+    <label className= 'label'><b>Contractor</b></label>
         <input
           onChange={handleChange}
           onBlur={handleBlur}
@@ -85,10 +87,10 @@ function Register() {
         /><br></br>
         {errors.contractor && <p className="error-text">{errors.contractor}</p>}<br></br>
 
-        <div>
-          <button  disabled = {isSubmitting} type = 'submit'>
-            Continue
-          </button>
+        <div className = "button1">
+          <Button Variant = 'outlined'  disabled = {isSubmitting} type = 'submit'  size = 'large' >
+            <b>Continue</b>
+        </Button>
         </div>
     </form>
     </div>

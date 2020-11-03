@@ -2,7 +2,7 @@ body {
 
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to right, rgba(0,0,255,0), rgba(0,0,255,1));
+  background-image: linear-gradient(to right, rgba(255, 153, 153,0), rgba(255, 153, 153,1));
   height: 100vh;
   font-family: Verdana, Geneva, sans-serif;
   color: white;
@@ -15,6 +15,11 @@ h1 {
   letter-spacing: 0.02em;
   margin-bottom: 0;
   color:Black;
+  font-family: sans-serif ;
+}
+
+.h1 {
+  font-family: cursive;
 }
 
 .container {
@@ -25,29 +30,50 @@ h1 {
 input {
   width: 100%;
   font-size: 1.5rem;
-  padding: 0.25em;
+  padding: 9px 0px;
+  padding-right: 0px;
   margin-top: 0.5em;
-  border: 3px solid black;
+  border: 1px solid 	rgb(0, 117, 153);
+  border-radius: 6px;
   font-family: Courier;
   text-align: center;
+  margin-left: 0px;
+
+}
+
+.label {
+ color: 	rgb(51, 207, 255);
+}
+
+form{
+  border-radius: 5px;
+  background-color: rgb(255, 230, 230);
+  padding: 18px;
+  padding-left: 0px;
+  padding-right: 1px;
+
+}
+
+.button1 {
+  background-color: rgb(255, 153, 153);
+  color: rgb(255, 153, 153);
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-left: 1px;
+
+}
+.button1:hover {
+  background-color: rgb(255, 153, 153);
+  color: black;
+  border: 3px solid #4CAF50;
 }
 
 
-
-button {
-  background: MediumSeaGreen;
-  font-size: 1.3rem;
-  margin: 1em;
-  padding: 0.2em 0.5em;
-}
-
-table{
-  font-family: Verdana, Geneva, sans-serif;
-}
 
 .error-input {
-  border: 2px solid red;
+  border: 1px solid red;
   border-radius: 4px;
+  padding-right: 0px;
 }
 
 .error-text {

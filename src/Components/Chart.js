@@ -14,7 +14,7 @@ function Chart () {
     labels: csvData.output_kp,
   datasets: [
     {
-
+      label:' KP v/s X',
       data: csvData.output_x,
       fill: false,
       backgroundColor: 'rgb(255, 99, 132)',
@@ -35,7 +35,7 @@ const options = {
 }
     return(
         <div>
-            <p> Chart Here </p>
+            <p className='label'><b> Chart Here </b></p>
             <Line data={data} options={options} />
         </div>
     );

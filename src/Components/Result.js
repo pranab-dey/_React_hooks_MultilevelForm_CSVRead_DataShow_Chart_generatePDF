@@ -15,9 +15,9 @@ export default function Result () {
   return(
     <div>
       <TableContainer style = {{display: 'flex', justifyContent: 'center'}}>
-      <Table border = '1' style = {{ width: '90%', justifyContent : 'center', fontfamily : 'Courier',  background: 'MediumSeaGreen' }} size = 'small' aria-label='caption table' className = 'table'>
+      <Table border = '2' style = {{ width: '90%', justifyContent : 'center', fontfamily : 'Courier',  background: 'rgb(230, 249, 255)' }} size = 'small' aria-label='caption table'>
         <TableHead>
-        <TableRow style= {{backgroundColor: 'burlywood', color: 'aliceblue'}}>
+        <TableRow style= {{backgroundColor: 'rgb(102, 219, 255)', color: 'black'}}>
             <TableCell> <b>Project Name </b></TableCell>
             <TableCell> <b>Project Description</b></TableCell>
             <TableCell> <b>Client</b></TableCell>
